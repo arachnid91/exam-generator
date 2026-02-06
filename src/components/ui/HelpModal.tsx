@@ -35,27 +35,57 @@ export function HelpModal() {
         </div>
 
         <div className="space-y-6">
+          {/* Import Questions - Primary Section */}
+          <section className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+            <h3 className="text-sm font-semibold text-blue-900 uppercase tracking-wide mb-3 flex items-center">
+              <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+              </svg>
+              Fragen importieren (Schnellstart)
+            </h3>
+            <p className="text-sm text-blue-800 mb-3">
+              Du hast eine JSON-Datei mit Fragen erhalten? So importierst du sie:
+            </p>
+            <ol className="space-y-2 text-sm text-blue-800">
+              <li className="flex items-start">
+                <span className="w-6 h-6 rounded-full bg-blue-600 text-white text-xs flex items-center justify-center mr-2 flex-shrink-0 mt-0.5">1</span>
+                <span>Klicke auf <strong>"Fragenbank"</strong> in der Navigation oben</span>
+              </li>
+              <li className="flex items-start">
+                <span className="w-6 h-6 rounded-full bg-blue-600 text-white text-xs flex items-center justify-center mr-2 flex-shrink-0 mt-0.5">2</span>
+                <span>Wähle den Tab <strong>"Verwalten"</strong></span>
+              </li>
+              <li className="flex items-start">
+                <span className="w-6 h-6 rounded-full bg-blue-600 text-white text-xs flex items-center justify-center mr-2 flex-shrink-0 mt-0.5">3</span>
+                <span>Klicke auf <strong>"Import JSON"</strong> und wähle deine Datei</span>
+              </li>
+            </ol>
+            <p className="text-xs text-blue-600 mt-3">
+              Nach dem Import kannst du unter "Prüfung" sofort mit dem Üben beginnen!
+            </p>
+          </section>
+
           {/* Getting Started */}
           <section>
             <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-2">
-              Erste Schritte
+              Eigene Fragen erstellen
             </h3>
             <ol className="space-y-2 text-sm text-gray-600">
               <li className="flex">
-                <span className="w-6 h-6 rounded-full bg-blue-100 text-blue-600 text-xs flex items-center justify-center mr-2 flex-shrink-0">1</span>
-                <span><strong>Bibliothek:</strong> Laden Sie Ihre Kurs-PDFs oder Bilder hoch. Text wird automatisch extrahiert.</span>
+                <span className="w-6 h-6 rounded-full bg-gray-100 text-gray-600 text-xs flex items-center justify-center mr-2 flex-shrink-0">1</span>
+                <span><strong>Bibliothek:</strong> Lade deine Kurs-PDFs oder Bilder hoch. Text wird automatisch extrahiert.</span>
               </li>
               <li className="flex">
-                <span className="w-6 h-6 rounded-full bg-blue-100 text-blue-600 text-xs flex items-center justify-center mr-2 flex-shrink-0">2</span>
-                <span><strong>Fragen:</strong> Fügen Sie Ihren Claude API-Schlüssel hinzu, wählen Sie Dateien und generieren Sie Fragen mit KI.</span>
+                <span className="w-6 h-6 rounded-full bg-gray-100 text-gray-600 text-xs flex items-center justify-center mr-2 flex-shrink-0">2</span>
+                <span><strong>Fragen:</strong> Füge deinen Claude API-Schlüssel hinzu, wähle Dateien und generiere Fragen mit KI.</span>
               </li>
               <li className="flex">
-                <span className="w-6 h-6 rounded-full bg-blue-100 text-blue-600 text-xs flex items-center justify-center mr-2 flex-shrink-0">3</span>
-                <span><strong>Prüfung:</strong> Konfigurieren und starten Sie Übungsprüfungen, um Ihr Wissen zu testen.</span>
+                <span className="w-6 h-6 rounded-full bg-gray-100 text-gray-600 text-xs flex items-center justify-center mr-2 flex-shrink-0">3</span>
+                <span><strong>Prüfung:</strong> Konfiguriere und starte Übungsprüfungen, um dein Wissen zu testen.</span>
               </li>
               <li className="flex">
-                <span className="w-6 h-6 rounded-full bg-blue-100 text-blue-600 text-xs flex items-center justify-center mr-2 flex-shrink-0">4</span>
-                <span><strong>Statistik:</strong> Verfolgen Sie Ihren Fortschritt und identifizieren Sie Verbesserungsbereiche.</span>
+                <span className="w-6 h-6 rounded-full bg-gray-100 text-gray-600 text-xs flex items-center justify-center mr-2 flex-shrink-0">4</span>
+                <span><strong>Statistik:</strong> Verfolge deinen Fortschritt und identifiziere Verbesserungsbereiche.</span>
               </li>
             </ol>
           </section>
@@ -115,9 +145,11 @@ export function HelpModal() {
               Daten & Datenschutz
             </h3>
             <p className="text-sm text-gray-600">
-              Alle Ihre Daten werden lokal in Ihrem Browser mit IndexedDB gespeichert.
-              Ihre Dateien und Fragen werden niemals auf einen Server hochgeladen, außer bei
-              der Fragegenerierung über die Claude API (nur Text wird gesendet, keine Dateien).
+              Alle deine Daten werden lokal in deinem Browser gespeichert (IndexedDB).
+              Deine Dateien und Fragen werden niemals auf einen Server hochgeladen.
+            </p>
+            <p className="text-sm text-gray-600 mt-2">
+              <strong>Tipp:</strong> Nutze "Export JSON" um deine Fragen zu sichern oder mit anderen zu teilen!
             </p>
           </section>
         </div>
